@@ -1,0 +1,48 @@
+.calendar-modal-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.calendar-modal-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.calendar-modal-date-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.calendar-modal-label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.calendar-modal-input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+}
+.calendar-modal-button-container {
+    display: flex;
+    justify-content: center;
+}
+.calendar-modal-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+.calendar-modal-button:hover {
+    background-color: #0056b3;
+}
+.calendar-modal-instructions {
+    text-align: center;
+    margin-top: 1rem;
+    color: #555;
+}

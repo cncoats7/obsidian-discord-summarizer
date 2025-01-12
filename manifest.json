@@ -1,0 +1,11 @@
+{
+	"id": "discord-summarizer",
+	"name": "Discord Summarizer",
+	"version": "1.0.0",
+	"minAppVersion": "1.7.7",
+	"description": "Fetches and summarizes discord content with OpenAI",
+	"author": "John Martin",
+	"authorUrl": "https://github.com/cncoats7",
+	"fundingUrl": "https://buymeacoffee.com/johncmartin",
+	"isDesktopOnly": false
+}
