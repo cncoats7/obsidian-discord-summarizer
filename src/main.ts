@@ -220,7 +220,7 @@ class SettingTab extends PluginSettingTab {
 					this.plugin.settings.discordToken = value;
 					await this.plugin.saveSettings();
 				});
-				text.inputEl.style.width = '500px';
+				text.inputEl.addClass('settings-long-input');
 			});
 
 		new Setting(containerEl)
@@ -235,7 +235,7 @@ class SettingTab extends PluginSettingTab {
 					this.plugin.settings.openAIKey = value;
 					await this.plugin.saveSettings();
 				});
-				text.inputEl.style.width = '500px';
+				text.inputEl.addClass('settings-long-input');
 			});
 	}
 }
