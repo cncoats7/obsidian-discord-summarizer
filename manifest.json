@@ -1,7 +1,7 @@
 {
 	"id": "discord-summarizer",
 	"name": "Discord Summarizer",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"minAppVersion": "1.7.7",
 	"description": "Fetches and summarizes discord content with OpenAI",
 	"author": "John Martin",
