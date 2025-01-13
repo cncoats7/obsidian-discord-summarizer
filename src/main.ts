@@ -38,8 +38,6 @@ export default class DiscordSummarizerPlugin extends Plugin {
 				this.getDiscordSummary(editor);
 			}
 		});
-		// Perform additional things with the ribbon
-		ribbonIconEl.addClass('my-plugin-ribbon-class');
 
 		// This adds an editor command that can perform some operation on the current editor instance
 		this.addCommand({
@@ -53,14 +51,8 @@ export default class DiscordSummarizerPlugin extends Plugin {
 
 		// This adds a settings tab so the user can configure various aspects of the plugin
 		this.addSettingTab(new SettingTab(this.app, this));
-
-		// When registering intervals, this function will automatically clear the interval when the plugin is disabled.
-		this.registerInterval(window.setInterval(() => console.log('setInterval'), 5 * 60 * 1000));
 	}
 
-	onunload() {
-
-	}
 
 	async loadSettings() {
 		this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
