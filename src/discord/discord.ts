@@ -179,12 +179,6 @@ export class Discord {
         try {
             const effectiveToDate = toDate || new Date();
             const dateUtils = new DateUtils();
-
-            console.log('Fetching messages:', {
-                fromDate: fromDate.toISOString(),
-                toDate: effectiveToDate.toISOString(),
-            });
-
             const beforeSnowflake = dateUtils.dateToDiscordSnowflake(effectiveToDate);
             const allMessages = new Map<string, Message>();
             let currentBefore = beforeSnowflake;
@@ -228,12 +222,6 @@ export class Discord {
             const uniqueMessages = Array.from(allMessages.values()).sort(
                 (a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime()
             );
-
-            console.log('Fetch complete:', {
-                totalMessages: uniqueMessages.length,
-                pagesSearched: pageCount + 1,
-                stoppedEarly: hitOldMessage,
-            });
 
             return uniqueMessages;
         } catch (error) {

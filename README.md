@@ -1,4 +1,4 @@
-# Obsidian Discord Summarizer
+# Discord Summarizer
 
 This simple plugin allows you to summarize up to 7 days worth of conversation from a given Discord Channel for a given time frame.  The resulting summary will be written to the active note.
 

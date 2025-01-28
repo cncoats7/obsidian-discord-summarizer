@@ -42,7 +42,7 @@ export default class DiscordSummarizerPlugin extends Plugin {
 		// This adds an editor command that can perform some operation on the current editor instance
 		this.addCommand({
 			id: 'get-discord-summary',
-			name: 'Get Summary of Discord Channel',
+			name: 'Get summary of discord Channel',
 
 			editorCallback: async (editor: Editor, view: MarkdownView) => {
 				this.getDiscordSummary(editor)
@@ -83,7 +83,7 @@ class CalendarModal extends Modal {
 
         // Add a title to the modal
         contentEl.createEl('h2', {
-            text: 'Select Date Range',
+            text: 'Select date range',
             cls: 'calendar-modal-title',
         });
 
@@ -100,7 +100,7 @@ class CalendarModal extends Modal {
 		const today = new Date().toISOString().split('T')[0];
 
         startDateContainer.createEl('label', {
-            text: 'Start Date:',
+            text: 'Start date:',
             cls: 'calendar-modal-label',
         });
         const startDatePicker = startDateContainer.createEl('input', {
@@ -114,7 +114,7 @@ class CalendarModal extends Modal {
             cls: 'calendar-modal-date-container',
         });
         endDateContainer.createEl('label', {
-            text: 'End Date:',
+            text: 'End date:',
             cls: 'calendar-modal-label',
         });
         const endDatePicker = endDateContainer.createEl('input', {
@@ -187,10 +187,10 @@ class SettingTab extends PluginSettingTab {
 		containerEl.empty();
 
 		new Setting(containerEl)
-			.setName('Discord Channel ID')
+			.setName('Discord channel ID')
 			.setDesc('ID of Discord channel to summarize')
 			.addText(text => text
-				.setPlaceholder('Enter Channel ID')
+				.setPlaceholder('Enter channel ID')
 				.setValue(this.plugin.settings.discordChannelId)
 				.onChange(async (value) => {
 					this.plugin.settings.discordChannelId = value;
@@ -198,10 +198,10 @@ class SettingTab extends PluginSettingTab {
 				}));
 
 		new Setting(containerEl)
-			.setName('Discord Server ID')
-			.setDesc('ID of Discord Server')
+			.setName('Discord server ID')
+			.setDesc('ID of Discord server')
 			.addText(text => text
-				.setPlaceholder('Enter Server ID')
+				.setPlaceholder('Enter server ID')
 				.setValue(this.plugin.settings.discordServerId)
 				.onChange(async (value) => {
 					this.plugin.settings.discordServerId = value;
@@ -209,12 +209,12 @@ class SettingTab extends PluginSettingTab {
 				}));
 
 		new Setting(containerEl)
-			.setName('Discord Token')
-			.setDesc('Authentication Token for Discord')
+			.setName('Discord token')
+			.setDesc('Authentication token for discord')
 			.addText(text => { 
 				wrapTextWithPasswordHide(text); 
 				text
-				.setPlaceholder('Enter Discord Token')
+				.setPlaceholder('Enter Discord token')
 				.setValue(this.plugin.settings.discordToken)
 				.onChange(async (value) => {
 					this.plugin.settings.discordToken = value;
@@ -225,11 +225,11 @@ class SettingTab extends PluginSettingTab {
 
 		new Setting(containerEl)
 			.setName('OpenAI Key')
-			.setDesc('Authentication Key for OpenAI')
+			.setDesc('Authentication key for OpenAI')
 			.addText(text => { 
 				wrapTextWithPasswordHide(text);
 				text
-				.setPlaceholder('Enter OpenAI Key')
+				.setPlaceholder('Enter OpenAI key')
 				.setValue(this.plugin.settings.openAIKey)
 				.onChange(async (value) => {
 					this.plugin.settings.openAIKey = value;
