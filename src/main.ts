@@ -30,7 +30,7 @@ export default class DiscordSummarizerPlugin extends Plugin {
 	async onload() {
 		await this.loadSettings();
 
-		const ribbonIconEl = this.addRibbonIcon('gamepad-2', 'Discord Summarizer', (evt: MouseEvent) => {
+		const ribbonIconEl = this.addRibbonIcon('gamepad-2', 'Discord summarizer', (evt: MouseEvent) => {
 			// Called when the user clicks the icon.
 			const activeView = this.app.workspace.getActiveViewOfType(MarkdownView);
 			if (activeView) {
@@ -42,7 +42,7 @@ export default class DiscordSummarizerPlugin extends Plugin {
 		// This adds an editor command that can perform some operation on the current editor instance
 		this.addCommand({
 			id: 'get-discord-summary',
-			name: 'Get summary of discord Channel',
+			name: 'Get summary of Discord channel',
 
 			editorCallback: async (editor: Editor, view: MarkdownView) => {
 				this.getDiscordSummary(editor)
@@ -100,7 +100,7 @@ class CalendarModal extends Modal {
 		const today = new Date().toISOString().split('T')[0];
 
         startDateContainer.createEl('label', {
-            text: 'Start date:',
+            text: 'Start date',
             cls: 'calendar-modal-label',
         });
         const startDatePicker = startDateContainer.createEl('input', {
@@ -114,7 +114,7 @@ class CalendarModal extends Modal {
             cls: 'calendar-modal-date-container',
         });
         endDateContainer.createEl('label', {
-            text: 'End date:',
+            text: 'End date',
             cls: 'calendar-modal-label',
         });
         const endDatePicker = endDateContainer.createEl('input', {
@@ -160,7 +160,7 @@ class CalendarModal extends Modal {
 
         // Add some instructions
 		contentEl.createEl('p', {
-			text: 'Select a start and end date from the calendars above, ensuring the range is 7 days or less, then click Confirm. Future dates are disabled.',
+			text: 'Select a start and end date from the calendars above, ensuring the range is 7 days or less, then click "Confirm". Future dates are disabled.',
 			cls: 'calendar-modal-instructions',
 		});
     }
@@ -187,7 +187,7 @@ class SettingTab extends PluginSettingTab {
 		containerEl.empty();
 
 		new Setting(containerEl)
-			.setName('Discord channel ID')
+			.setName('Discord channel id')
 			.setDesc('ID of Discord channel to summarize')
 			.addText(text => text
 				.setPlaceholder('Enter channel ID')
@@ -198,7 +198,7 @@ class SettingTab extends PluginSettingTab {
 				}));
 
 		new Setting(containerEl)
-			.setName('Discord server ID')
+			.setName('Discord server id')
 			.setDesc('ID of Discord server')
 			.addText(text => text
 				.setPlaceholder('Enter server ID')
@@ -224,7 +224,7 @@ class SettingTab extends PluginSettingTab {
 			});
 
 		new Setting(containerEl)
-			.setName('OpenAI Key')
+			.setName('OpenAI key')
 			.setDesc('Authentication key for OpenAI')
 			.addText(text => { 
 				wrapTextWithPasswordHide(text);
